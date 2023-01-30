@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:helloworld/pages/service/world_time.dart';
+
+import '../services/world_time.dart';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
