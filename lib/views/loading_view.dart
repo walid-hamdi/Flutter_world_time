@@ -7,20 +7,20 @@ class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
 
   @override
-  _LoadingWidgetState createState() => _LoadingWidgetState();
+  createState() => _LoadingWidgetState();
 }
 
 class _LoadingWidgetState extends State<Loading> {
-  void getWorldTime() async {
+  void getWorldTime() {
     WorldTime instanceWorldTime = WorldTime(
       location: "Tunisia",
       url: "Africa/Tunis",
       flag: "tunisia.png",
     );
 
-    await instanceWorldTime.getTime();
-    Navigator.pushReplacementNamed(
-      context,
+    instanceWorldTime.getTime();
+
+    Navigator.of(context).pushReplacementNamed(
       "/home",
       arguments: {
         "location": instanceWorldTime.location,

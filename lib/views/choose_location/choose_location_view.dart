@@ -5,7 +5,7 @@ class ChooseLocation extends StatefulWidget {
   const ChooseLocation({Key? key}) : super(key: key);
 
   @override
-  _ChooseLocationWidgetState createState() => _ChooseLocationWidgetState();
+  createState() => _ChooseLocationWidgetState();
 }
 
 class _ChooseLocationWidgetState extends State<ChooseLocation> {

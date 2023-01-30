@@ -18,7 +18,7 @@ class WorldTime {
     try {
       var response = await http.get(
         Uri.parse(
-          "https://api.ipgeolocation.io/timezone?apiKey=d889ef066d714ebdadadbddbd73de8cc&tz=${url}",
+          "https://api.ipgeolocation.io/timezone?apiKey=d889ef066d714ebdadadbddbd73de8cc&tz=$url",
         ),
       );
       Map data = jsonDecode(response.body);
