@@ -63,4 +63,3 @@ jobs:
         with:
           name: my-artifact
           path: my_files.tar
-Merge pull request
