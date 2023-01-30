@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/pages/service/world_time.dart';
+import '../../services/world_time.dart';
 
 class ChooseLocation extends StatefulWidget {
   const ChooseLocation({Key? key}) : super(key: key);
@@ -14,7 +14,8 @@ class _ChooseLocationWidgetState extends State<ChooseLocation> {
     WorldTime(location: "Germany", url: "Europe/Berlin", flag: "germany.png"),
     WorldTime(location: "Brazil", url: "America/Cuiaba", flag: "brazil.png"),
     WorldTime(location: "Japan", url: "Asia/Tokyo", flag: "japan.png"),
-    WorldTime(location: "Istanbul", url: "Europe/Istanbul", flag: "istanbul.webp"),
+    WorldTime(
+        location: "Istanbul", url: "Europe/Istanbul", flag: "istanbul.webp"),
   ];
 
   void update(index, context) async {
@@ -53,9 +54,7 @@ class _ChooseLocationWidgetState extends State<ChooseLocation> {
             title: Text(
               listOfLocations[index].location,
             ),
-            onTap: () => {
-              update(index, context)
-            },
+            onTap: () => {update(index, context)},
             leading: CircleAvatar(
               child: Image.asset(
                 "assets/flags/${listOfLocations[index].flag}",
