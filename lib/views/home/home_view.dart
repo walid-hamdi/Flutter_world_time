@@ -4,7 +4,7 @@ class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  _HomeWidgetState createState() => _HomeWidgetState();
+  createState() => _HomeWidgetState();
 }
 
 class _HomeWidgetState extends State<Home> {
@@ -12,7 +12,9 @@ class _HomeWidgetState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    data = data.isNotEmpty ? data : ModalRoute.of(context)?.settings.arguments as Map;
+    data = data.isNotEmpty
+        ? data
+        : ModalRoute.of(context)?.settings.arguments as Map;
 
     var bgColor = data["dayTime"] ? Colors.blue[500] : Colors.grey[900];
 
@@ -25,10 +27,11 @@ class _HomeWidgetState extends State<Home> {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.yellow[400],
+                backgroundColor: Colors.yellow[400],
               ),
               onPressed: () async {
-                dynamic result = await Navigator.pushNamed(context, "/chooseLocation");
+                dynamic result =
+                    await Navigator.pushNamed(context, "/chooseLocation");
                 setState(() {
                   data = {
                     "location": result["location"],
