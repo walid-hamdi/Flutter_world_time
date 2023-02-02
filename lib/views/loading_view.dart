@@ -19,6 +19,7 @@ class _LoadingWidgetState extends State<Loading> {
     );
 
     await instanceWorldTime.getTime();
+    if (!mounted) return;
     Navigator.pushReplacementNamed(
       context,
       "/home",
