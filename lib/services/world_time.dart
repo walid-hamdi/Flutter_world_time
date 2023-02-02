@@ -3,7 +3,7 @@ import 'dart:convert';
 
 class WorldTime {
   String location;
-  late String time;
+  String time = "";
   String url;
   String flag;
   bool dayTime = false;
