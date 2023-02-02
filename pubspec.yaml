@@ -1,5 +1,5 @@
 name: world_times
-description: A new Flutter project.
+description: A world time and location app displaying current times for different cities, time conversion between zones, customizable alarms, sunrise/sunset times, weather info, map view, customizable home screen and themes, multilingual support. Helps users stay on schedule and plan their day across the world.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
