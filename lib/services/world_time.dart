@@ -32,7 +32,7 @@ class WorldTime {
         dayTime = true;
       }
     } catch (e) {
-      time = "There is no way to get the date time";
+      time = "Wait...";
     }
   }
 }
